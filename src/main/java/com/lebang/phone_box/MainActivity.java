@@ -14,6 +14,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 
 /**
  * 客户端，连接WIFI
@@ -37,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
         builder.setCall("calling");
         PhoneBoxCallProto.PhoneBoxCall call = builder.build();
 
-        Log.e(TAG."phone call = " + call.);
+        Log.e(TAG,"phone call = " + Arrays.toString(call.toByteArray()));
+
+        Log.e(TAG,"phone prase = " + call.getCall());
 
     }
 
